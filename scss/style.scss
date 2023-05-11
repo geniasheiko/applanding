@@ -1,0 +1,357 @@
+@import url('http://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&family=Roboto:wght@400;500;700&display=swap');
+
+// ===Mixin===
+@mixin roboto {
+   font-family: 'Roboto', sans-serif;
+}
+
+@mixin quicksand {
+   font-family: 'Quicksand', sans-serif;
+}
+
+// === / Mixin ===
+
+// === Variables ===
+$base: 4px;
+$fw-light: 100;
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-bold: 700;
+
+$fs-sm: 12px;
+$fs-md: 15px;
+
+$padding-vertical-xs: $base * 5;
+$padding-vertical-sm: $base * 15;
+$padding-vertical: $base * 30;
+
+$transition: .2s;
+
+$color-divider: #d8e3fe;
+$color-primary: #697ca6;
+$color-secondary: #6188ff;
+// === / Variables ===
+
+// === Common ===
+
+body {
+   @include roboto;
+
+   color: #8d96bd;
+}
+
+.section-outer {
+   border-bottom: 1px solid $color-divider;
+}
+
+.section-inner {
+   max-width: 900px;
+   margin: 0 auto;
+   padding-top: $padding-vertical;
+   padding-bottom: $padding-vertical;
+
+   &--wide {
+      max-width: 1200px;
+   }
+}
+
+.btn {
+   @include quicksand;
+   font-weight: $fw-bold;
+   font-size: $fs-sm;
+   text-decoration: none;
+   margin: 0;
+   padding: $base * 3 $base * 4;
+   border: 0;
+   background-color: none;
+   border-radius: 2px;
+   transition: $transition;
+
+   &--primary {
+      background-color: #d2e1ff;
+      color: #3a79ff;
+
+      &:hover {
+         background-color: darken(#d2e1ff, 5%);
+      }
+   }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   @include quicksand;
+
+   padding: 0;
+   margin: 0;
+   font-weight: $fw-regular;
+}
+
+h1,
+h2 {
+   margin-bottom: $base * 7;
+   font-size: 48px;
+}
+
+h3 {
+   font-size: 36px;
+}
+
+h4 {
+   font-size: 24px;
+}
+
+h5 {
+   @include roboto;
+   margin-bottom: $base * 4;
+   font-size: 10px;
+
+}
+
+.ta-c {
+   text-align: center;
+}
+
+
+// === / Common ===
+
+// === Header ===
+.section-header {
+   .section-inner {
+      padding-top: $padding-vertical-xs;
+      padding-bottom: $padding-vertical-xs;
+   }
+}
+
+.main-navigation {
+   display: flex;
+   align-items: center;
+}
+
+.logo {
+   background-color: #5e81fe;
+   width: $base * 6;
+   height: $base * 6;
+   border-radius: 100%;
+}
+
+
+.nav {
+   margin-left: $base * 18;
+}
+
+.nav-wrapper {
+   display: flex;
+   margin: 0;
+   padding: 0;
+   list-style: none;
+
+   &__item {
+      &+& {
+         margin-left: $base * 10;
+      }
+
+      &-link {
+         @include quicksand;
+
+         font-size: $fs-sm;
+         color: $color-primary;
+         font-weight: $fw-medium;
+         text-decoration: none;
+         transition: $transition;
+
+         &:hover {
+            color: #5e81fe;
+         }
+
+         &--active {
+            font-weight: $fw-bold;
+            color: $color-secondary;
+         }
+      }
+   }
+}
+
+.socials {
+   margin-left: auto;
+}
+
+.socials-wrapper {
+   display: flex;
+   align-items: center;
+   margin: 0;
+   padding: 0;
+   list-style: none;
+
+   &__item {
+      &+& {
+         margin-left: $base * 10;
+      }
+
+      &-link {
+         path {
+            fill: $color-primary;
+            transition: $transition;
+         }
+
+         &:hover {
+            path {
+               fill: $color-secondary;
+            }
+         }
+      }
+   }
+}
+
+.btn-wrapper {
+   margin-left: $base * 11;
+}
+
+// === / Header ===
+
+// === Hero-image ===
+.section-hero-image {
+   background-color: #f4f7ff;
+}
+
+.slider-hero-image {
+   margin: 0;
+   padding: 0;
+   list-style: none;
+
+   &__item {
+      height: $base * 140;
+      text-align: center;
+      background-position: 50% 50%;
+      background-size: cover;
+
+      &-content {
+         h2 {
+            font-weight: $fw-light;
+
+            span {
+               font-weight: $fw-medium;
+
+            }
+         }
+
+         .text {
+            width: 60%;
+            margin: 0 auto $base*5;
+            line-height: 2;
+         }
+
+      }
+   }
+}
+
+.icon-play {
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   width: $base * 13;
+   height: $base * 13;
+   background-color: #fff;
+   border-radius: 100%;
+   box-shadow: 0 10px 50px rgba(#c9d1e7, .6);
+
+   &::before {
+      display: block;
+      width: 0;
+      height: 0;
+      margin-left: $base * 4;
+      content: '';
+      border-width: $base*2 $base*3;
+      border-color: transparent;
+      border-style: solid;
+      border-left-color: #5e81ff;
+   }
+}
+
+// === / Hero-image ===
+
+// === Customers ===
+.section-customers {
+   .section-inner {
+      padding-top: $padding-vertical-sm;
+      padding-bottom: $padding-vertical-sm;
+   }
+}
+
+// === / Customers ===
+
+// === Plan-and-manage ===
+.section-plan-and-manage {
+   background-color: #f5f8ff;
+}
+
+// === / Plan-and-manage ===
+
+// .features {}
+
+// === Stats ===
+.section-stats {
+   background-color: #e9efff;
+
+   .section-inner {
+      padding-top: $padding-vertical-sm;
+      padding-bottom: $padding-vertical-sm;
+   }
+}
+
+// === / Stats ===
+
+// === Blog ===
+.section-blog {
+   background-color: #f5f8ff;
+}
+
+// === / Blog ===
+
+// === Quotes ===
+.section-quotes {
+   background-color: #eaf0ff;
+}
+
+// === / Quotes  ===
+
+// .faq {}
+
+// === Get-started ===
+.section-get-started {
+   background-color: #6888ff;
+}
+
+// === / Get-started  ===
+
+// === Newsletter  ===
+.section-newsletter {
+   background-color: #fcfdff;
+}
+
+// === / Newsletter ===
+
+// === Footer ===
+.section-footer {
+   border-bottom: 0;
+
+   .section-inner {
+      padding-top: $padding-vertical-sm;
+      padding-bottom: $padding-vertical-sm;
+   }
+}
+
+.copyright {
+   @include quicksand();
+
+   margin-top: $base * 7;
+   margin-left: $base * 24;
+   font-size: $fs-sm;
+   font-weight: $fw-medium;
+   color: #aeb8d0;
+}
+
+// === / Stats ===
