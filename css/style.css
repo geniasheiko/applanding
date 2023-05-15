@@ -231,6 +231,16 @@ h5 {
   line-height: 2;
 }
 
+.icon-play {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  background-color: #fff;
+  border-radius: 100%;
+  box-shadow: 0 10px 50px rgba(201, 209, 231, 0.6);
+}
 .icon-play::before {
   display: block;
   width: 0;
@@ -259,20 +269,30 @@ h5 {
 }
 
 .section-plan-and-manage {
+  position: relative;
+  overflow: hidden;
   background-color: #f5f8ff;
 }
 .section-plan-and-manage__content {
   width: 50%;
 }
-.section-plan-and-manage__content h2 {
+.section-plan-and-manage__content .aside-image {
+  position: absolute;
+  top: 0;
+  left: 50%;
+}
+.section-plan-and-manage__content h3 {
   font-weight: 100;
 }
-.section-plan-and-manage__content h2 span {
+.section-plan-and-manage__content h3 span {
   font-weight: 500;
 }
 .section-plan-and-manage__content .text {
   line-height: 2;
   margin-bottom: 48px;
+}
+.section-plan-and-manage__content .btn-group svg {
+  margin-left: 4px;
 }
 
 .section-stats {
