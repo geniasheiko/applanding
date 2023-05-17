@@ -38,6 +38,13 @@ body {
 .btn--primary:hover {
   background-color: #b9d0ff;
 }
+.btn--danger {
+  background-color: #ffd7d7;
+  color: #d43f3f;
+}
+.btn--danger:hover {
+  background-color: #b9d0ff;
+}
 .btn--secondary {
   color: #fff;
   background-color: #4c85ff;
@@ -77,6 +84,7 @@ h3 {
 }
 
 h4 {
+  margin-bottom: 80px;
   font-size: 24px;
 }
 
@@ -91,10 +99,11 @@ h5 {
 }
 
 .dots {
-  display: flex;
-  padding: o;
   margin: 0;
+  padding: 0;
   list-style: none;
+  display: flex;
+  justify-content: center;
 }
 .dots__item {
   width: 8px;
@@ -145,10 +154,10 @@ h5 {
 }
 
 .nav-wrapper {
-  display: flex;
   margin: 0;
   padding: 0;
   list-style: none;
+  display: flex;
 }
 .nav-wrapper__item + .nav-wrapper__item {
   margin-left: 40px;
@@ -174,11 +183,11 @@ h5 {
 }
 
 .socials-wrapper {
-  display: flex;
-  align-items: center;
   margin: 0;
   padding: 0;
   list-style: none;
+  display: flex;
+  align-items: center;
 }
 .socials-wrapper__item + .socials-wrapper__item {
   margin-left: 40px;
@@ -220,7 +229,7 @@ h5 {
   background-size: cover;
 }
 .slider-hero-image__item-content h2 {
-  font-weight: 100;
+  font-weight: 300;
 }
 .slider-hero-image__item-content h2 span {
   font-weight: 500;
@@ -282,7 +291,7 @@ h5 {
   left: 50%;
 }
 .section-plan-and-manage__content h3 {
-  font-weight: 100;
+  font-weight: 300;
 }
 .section-plan-and-manage__content h3 span {
   font-weight: 500;
@@ -295,18 +304,149 @@ h5 {
   margin-left: 4px;
 }
 
+.section-features {
+  background: url(../img/features.svg) no-repeat 50% 50%;
+}
+.section-features h5 {
+  text-align: center;
+}
+.section-features h4 {
+  font-weight: 500;
+}
+.section-features .btns {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.features-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  margin: 0 0 100px;
+  text-align: center;
+}
+.features-list__item {
+  position: relative;
+  flex-basis: 25%;
+}
+.features-list__item:not(:first-child) {
+  margin-left: 40px;
+}
+.features-list__item:not(:first-child)::before {
+  position: absolute;
+  top: 120px;
+  left: -34px;
+  width: 28px;
+  height: 1px;
+  content: "";
+  background-color: #dae4fe;
+}
+.features-list__item-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 68px;
+  height: 68px;
+  margin: 0 auto 32px;
+  background-color: #f1f5ff;
+  border-radius: 100%;
+}
+.features-list__item-title {
+  margin-bottom: 28px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #4074f8;
+}
+.features-list__item-text {
+  line-height: 2;
+}
+
+.or-block {
+  display: inline-flex;
+  align-items: center;
+  margin: 0 16px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 40px;
+}
+.or-block::before, .or-block::after {
+  display: block;
+  width: 16px;
+  height: 1px;
+  content: "";
+  background-color: #dae4fe;
+}
+.or-block::before {
+  margin-right: 16px;
+}
+.or-block::after {
+  margin-left: 16px;
+}
+
 .section-stats {
   background-color: #e9efff;
+  display: flex;
 }
-.section-stats .section-inner {
-  padding-top: 60px;
-  padding-bottom: 60px;
+.section-stats__icon {
+  margin-bottom: 24px;
+}
+.section-stats__number {
+  font-family: "Quicksand", sans-serif;
+  margin-bottom: 28px;
+  font-size: 48px;
+}
+.section-stats__text {
+  font-family: "Quicksand", sans-serif;
+  width: 50%;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+.section-stats__left, .section-stats__right {
+  display: flex;
+  flex-basis: 50%;
+  flex-direction: column;
+  padding: 64px 88px;
+}
+.section-stats__left {
+  color: #fff;
+  text-align: right;
+  background-color: #6888ff;
+  align-items: flex-end;
+}
+.section-stats__right {
+  color: #5e80ff;
 }
 
 .section-blog {
   background-color: #f5f8ff;
 }
 
+.section-inner {
+  position: relative;
+}
+
+.slider-blog {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-bottom: 100px;
+  background-color: #fff;
+  border: 1px solid #d8e3fe;
+  box-shadow: 0 15px 50px #eff4ff;
+}
+.slider-blog__item {
+  display: flex;
+  padding: 64px 32px;
+}
+.slider-blog__item-gallery, .slider-blog__item-content {
+  flex-basis: 45%;
+}
+.slider-blog__item-content {
+  margin-left: 10%;
+}
 .section-quotes {
   background-color: #eaf0ff;
 }
