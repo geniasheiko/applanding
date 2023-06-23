@@ -1166,6 +1166,11 @@ h2 {
    &__left,
    &__right {
       width: 45%;
+
+
+      @media (max-width: $breakpoint-xl-min) {
+         width: 100%;
+      }
    }
 
    &__left {
@@ -1173,25 +1178,25 @@ h2 {
          line-height: 2;
       }
 
-      @media (max-width: $breakpoint-xs-max) {
-         margin-bottom: $base*10;
+      @media (max-width: $breakpoint-sm-max) {
+         margin-bottom: 30px;
+      }
+
+      @media (max-width: $breakpoint-xl-min) {
+         margin-bottom: 30px;
       }
    }
-
-   //  &__right {
-   //   position: relative;
-
-   // .dots {
-   //  bottom: 0 !important;
-   //left: 50%;
-   //  }
-   // }
 }
 
 .slider-quotes-container {
    width: 50vw;
    margin: -50px 0 40px -50px !important;
    overflow: hidden;
+
+   @media (max-width: $breakpoint-xl-min) {
+      width: 100vw;
+      margin-top: 0;        
+  }
 }
 
 .slider-quotes {
@@ -1211,6 +1216,13 @@ h2 {
       &.swiper-slide-active {
          opacity: 1;
       }
+      @media (max-width: $breakpoint-xl-min) {
+         min-width: 50vw;                  
+     }
+
+     @media (max-width: $breakpoint-xs-max) {
+         min-width: 100vw;                  
+     }
    }
 }
 
